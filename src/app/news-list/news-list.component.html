@@ -1,0 +1,40 @@
+<br/>
+<br/>
+<div class="container">
+  <div class="alert alert-primary" role="alert">
+    <a>all news</a>
+  </div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">content</th>
+        <th scope="col">author</th>
+        <th scope="col">country</th>
+        <th scope="col">language</th>
+        <th scope="col">category</th>
+        <th scope="col">operation</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+          <th>{{item.id}}</th>
+          <th>{{item.title}}</th>
+          <th>{{item.content}}</th>
+          <th>{{item.author}}</th>
+          <th>{{item.country}}</th>
+          <th>{{item.language}}</th>
+          <th>{{item.category}}</th>
+          <th>
+              <i (click)="deleteNews(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>
+              <a routerLink="/update/{{item.id}}">
+                <i (click)="deleteNews(item.id)" class="fa fa-edit" style="font-size:20px;color:blue;"></i>
+              </a>            
+            </th>
+      </tr> 
+    </tbody>
+  </table>
+</div>

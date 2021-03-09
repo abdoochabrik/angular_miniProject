@@ -1,0 +1,43 @@
+
+<br/>
+<br/>
+
+<div class="container">
+    <!--div  *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>success!</strong> Your data has been entered successfully.
+        <button type="button" (click)="closeAlert()" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div-->
+      <div class="alert alert-primary" role="alert">
+        <a>Update your news</a>
+      </div>
+<form [formGroup]="editNews" >
+    <div class="form-group">
+      <label for="exampleInputEmail1">News title</label>
+      <input type="text" class="form-control"  placeholder="Enter title" formControlName="title">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">News Content</label>
+      <input type="text" class="form-control" placeholder="enter content"  formControlName="content">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">News author</label>
+        <input type="text" class="form-control" placeholder="enter author"  formControlName="author">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">News country</label>
+        <input type="text" class="form-control" placeholder="enter country"  formControlName="country">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">News language</label>
+        <input type="text" class="form-control" placeholder="enter language"  formControlName="language">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">News category</label>
+        <input type="text" class="form-control" placeholder="enter category"  formControlName="category">
+      </div>
+   
+    <button type="submit" class="btn btn-primary">Edit</button>
+  </form>
+</div>
