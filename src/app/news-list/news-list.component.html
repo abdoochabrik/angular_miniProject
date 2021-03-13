@@ -4,7 +4,8 @@
   <div class="alert alert-primary" role="alert">
     <a>all news</a>
   </div>
-<table class="table table-striped">
+
+<!--table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">id</th>
@@ -36,5 +37,15 @@
             </th>
       </tr> 
     </tbody>
-  </table>
+  </table-->
+
+<div class="cc" *ngFor="let item of data" >
+    <div class="container ">
+                         <h1>{{item.title}}</h1>
+          <h6>topic : </h6><p>{{item.content}}</p>
+          <h6>from : </h6> <p>{{item.country}}</p>
+          <h6>by : </h6> <p>{{item.author}}</p>
+           <i (click)="deleteNews(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>
+    </div>
+</div>
 </div>
