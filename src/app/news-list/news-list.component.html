@@ -39,7 +39,7 @@
     </tbody>
   </table-->
 
-<div class="cc" *ngFor="let item of data" >
+<!--div class="cc" *ngFor="let item of data" >
     <div class="container ">
       <img src="assets/images/news.jpg" class="img-thumbnail img-circle" width="304" height="236">
                          <h1>{{item.title}}</h1>
@@ -48,5 +48,27 @@
           <h6>by : </h6> <p>{{item.author}}</p>
            <i (click)="deleteNews(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>
     </div>
+</div-->
+
+<div class="row mt-1" >
+  <div class="col-md-4" *ngFor="let item of data">
+    <div class="card mb-3">
+      <img src="assets/images/news.jpg"  >
+      <div class="card-body">
+        <h3 class="card-title">{{item.title}}</h3>
+        <p class="card-text lead">{{item.content}}</p>
+        <p class="card-text lead">{{item.country}}</p>
+
+      </div>
+      <div class="card-footer">
+        <div class="row justify-content-center">
+          <button  class="btn btn-outline-info">
+            View details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 </div>
